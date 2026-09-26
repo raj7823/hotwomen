@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PrivateCall — Premium Private Calls</title>
+<meta name="description" content="Premium private social landing page.">
+<style>
+:root{--bg:#050507;--pink:#ff1f70;--pink2:#ff4b8b;--gold:#f6c64f;--text:#fff;--muted:#aaa8af;--line:#26262d;--green:#20d56c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050507;color:var(--text);font-family:Inter,Arial,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 0,#3a0b2050,transparent 32%),radial-gradient(circle at 90% 20%,#360b2540,transparent 28%)}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,94%);margin:auto}
+nav{height:68px;position:fixed;z-index:99;top:0;left:0;right:0;background:#050507dc;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff0b}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{font-size:23px;font-weight:950}.logo span{color:var(--pink)}.links{display:flex;gap:25px;color:#c9c6cb;font-size:14px}.links a:hover{color:#fff}.navbtn{background:linear-gradient(135deg,var(--pink),#c9155c);padding:10px 18px;border-radius:10px;font-weight:900}
+.hero{padding:95px 0 0}.heroGrid{display:grid;grid-template-columns:1.03fr .97fr;min-height:520px}.heroPhoto{position:relative;overflow:hidden;border-radius:0 0 0 0;background:#111}.heroPhoto img{width:100%;height:100%;min-height:520px;object-fit:cover;display:block}.heroPhoto:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 45%,#050507 100%),linear-gradient(0deg,#000b,transparent 55%)}.heroLabel{position:absolute;z-index:2;bottom:22px;left:24px}.online{display:inline-flex;align-items:center;gap:7px;border:1px solid #25643c;background:#06170de8;padding:7px 11px;border-radius:999px;font-size:12px}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+.heroCopy{padding:42px 34px 35px 40px;background:#050507;display:flex;flex-direction:column;justify-content:center}.badge{display:inline-block;align-self:flex-start;color:#ff73a4;border:1px solid #76233f;background:#190a11;padding:8px 13px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:1px}
+h1{font-size:clamp(45px,6vw,76px);line-height:.95;letter-spacing:-3px;margin:19px 0}.pink{color:var(--pink)}.heroCopy p{color:#aaa7ad;line-height:1.65;font-size:16px}.icons{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}.icon{font-size:12px;text-align:center;color:#ddd}.iconCircle{width:47px;height:47px;margin:auto auto 7px;border:1px solid #9b2453;border-radius:50%;display:grid;place-items:center;font-size:20px;background:#140a11}.mainbtn{display:block;text-align:center;background:linear-gradient(135deg,var(--pink),#c9155d);padding:16px;border-radius:12px;font-weight:950;box-shadow:0 15px 40px #ff1f7030}
+.trust{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#08080a}.trust div{padding:20px 10px;text-align:center;border-right:1px solid var(--line)}.trust div:last-child{border:0}.trust b{display:block;color:var(--gold);font-size:13px;margin-top:5px}.trust span{font-size:11px;color:#89868d}
+section{padding:58px 0}.head{display:flex;align-items:end;justify-content:space-between;margin-bottom:23px}.head h2{margin:0;font-size:32px}.head p{margin:5px 0 0;color:#918e95}.view{border:1px solid #8c2251;color:#ff5c98;padding:10px 16px;border-radius:999px;font-size:12px;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.profile{background:#111116;border:1px solid #292932;border-radius:15px;padding:7px;overflow:hidden}.pic{height:295px;position:relative;border-radius:10px;overflow:hidden;background:#222}.pic img{width:100%;height:100%;object-fit:cover}.status{position:absolute;right:8px;top:8px;background:#0b2517e8;border:1px solid #23703e;color:#72e99d;border-radius:999px;padding:6px 8px;font-size:10px;font-weight:900}.pbody{padding:10px 3px 2px}.name{font-weight:900;font-size:15px}.loc{font-size:11px;color:#85828a;margin:4px 0 10px}.call{display:block;text-align:center;padding:10px;border-radius:9px;background:linear-gradient(135deg,var(--pink),#c9155d);font-size:11px;font-weight:900}
+.vip{border:1px solid #69511e;border-radius:20px;overflow:hidden;background:#0d0d0f;display:grid;grid-template-columns:.9fr 1.1fr;min-height:260px}.vipImg img{width:100%;height:100%;object-fit:cover}.vipCopy{padding:32px;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 60%,#33250b,#101014 60%)}.vipCopy h2{font-size:35px;margin:8px 0}.checks{line-height:2;color:#ddd;font-size:13px}.checks b{color:#38df7b}.goldBtn{display:inline-block;align-self:flex-start;margin-top:12px;background:linear-gradient(135deg,#f6c64f,#bd851b);color:#0a0906;padding:13px 22px;border-radius:10px;font-weight:950}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{background:#101014;border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;gap:15px}.num{width:42px;height:42px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--pink);font-weight:900}.step h3{margin:2px 0 6px}.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:11px}.foot{display:flex;justify-content:space-between}
+@media(max-width:950px){.grid{grid-template-columns:repeat(3,1fr)}.heroGrid{grid-template-columns:1fr}.heroPhoto{max-height:500px}.heroCopy{padding:35px}.trust{grid-template-columns:repeat(3,1fr)}.vip{grid-template-columns:1fr}}
+@media(max-width:650px){.links{display:none}.heroPhoto img{min-height:410px}.heroCopy{padding:30px 18px}.icons{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.pic{height:280px}.trust{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.head{align-items:flex-start;gap:12px}.head h2{font-size:27px}.view{white-space:nowrap}}
+@media(max-width:430px){.grid{grid-template-columns:1fr}.pic{height:390px}.foot{flex-direction:column;gap:8px}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav"><div class="logo">♡ Private<span>Call</span></div><div class="links"><a href="#profiles">Live Girls</a><a href="#profiles">Video Call</a><a href="#profiles">Audio Call</a><a href="#vip">VIP Plan</a><a href="#how">How It Works</a></div><a class="navbtn" href="#join">✈ Join Now</a></div></nav>
+
+<section class="hero"><div class="heroGrid">
+<div class="heroPhoto"><img src="assets/hero.jpg" alt="Featured profile"><div class="heroLabel"><div class="online"><i class="dot"></i> Online Now</div><div style="font-size:22px;font-weight:900;margin-top:8px">Featured Profile</div></div></div>
+<div class="heroCopy"><div class="badge">✓ PREMIUM PRIVATE EXPERIENCE</div><h1>Live <span class="pink">Video Call</span></h1><h2 style="font-size:27px;margin:0 0 9px">अब बात नहीं, सीधी मुलाकात ❤️</h2><p>Premium private connection landing page with profile cards, smooth navigation and a polished mobile experience.</p>
+<div class="icons"><div class="icon"><div class="iconCircle">▣</div>Video Call</div><div class="icon"><div class="iconCircle">◉</div>Audio Call</div><div class="icon"><div class="iconCircle">🔒</div>Private</div><div class="icon"><div class="iconCircle">♧</div>Support</div></div>
+<a class="mainbtn" href="#profiles">Join Now — Start Call →</a></div></div></section>
+
+<div class="trust"><div>⚡<b>Instant Connect</b><span>No Waiting</span></div><div>🛡<b>Privacy Focused</b><span>Protected Flow</span></div><div>☎<b>Profile Based</b><span>Choose Your Call</span></div><div>♥<b>24/7 Access</b><span>Day & Night</span></div><div>◆<b>VIP Experience</b><span>Premium Quality</span></div></div>
+
+<section id="profiles"><div class="container"><div class="head"><div><h2>🔥 Trending Live Profiles</h2><p>Profiles • Online Now</p></div><a class="view" href="#profiles">View All Girls →</a></div>
+<div class="grid">
+<div class="profile"><div class="pic"><img src="assets/profile1.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Riya Patel</div><div class="loc">⌖ Mumbai</div><a class="call" href="#join">▣ Video Call</a></div></div>
+<div class="profile"><div class="pic"><img src="assets/profile2.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Neha Singh</div><div class="loc">⌖ Delhi</div><a class="call" href="#join">▣ Video Call</a></div></div>
+<div class="profile"><div class="pic"><img src="assets/profile3.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Anjali Verma</div><div class="loc">⌖ Jaipur</div><a class="call" href="#join">▣ Video Call</a></div></div>
+<div class="profile"><div class="pic"><img src="assets/profile4.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Kavya Sharma</div><div class="loc">⌖ Bengaluru</div><a class="call" href="#join">▣ Video Call</a></div></div>
+<div class="profile"><div class="pic"><img src="assets/profile5.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Pooja Yadav</div><div class="loc">⌖ Lucknow</div><a class="call" href="#join">▣ Video Call</a></div></div>
+</div></div></section>
+
+<section id="vip"><div class="container"><div class="vip"><div class="vipImg"><img src="assets/vip.jpg" alt="VIP"></div><div class="vipCopy"><div class="eyebrow">♛ VIP MEMBERSHIP</div><h2>Premium Access</h2><p style="margin:0 0 10px;color:#ddd">Use this section for your own legitimate premium membership or booking offer.</p><div class="checks"><div><b>✓</b> Direct access</div><div><b>✓</b> Premium profiles</div><div><b>✓</b> HD experience</div><div><b>✓</b> Smooth private flow</div></div><a class="goldBtn" href="#join">♛ Get VIP Access →</a></div></div></div></section>
+
+<section id="how"><div class="container"><div class="head"><div><h2>⚙ How It Works?</h2><p>Connect in 3 simple steps</p></div></div><div class="steps"><div class="step"><div class="num">1</div><div><h3>Choose a Profile</h3><p>Browse and select a profile from the photo cards.</p></div></div><div class="step"><div class="num">2</div><div><h3>Continue</h3><p>Connect the button to your own booking or contact flow.</p></div></div><div class="step"><div class="num">3</div><div><h3>Start Call</h3><p>Continue on your own secure destination.</p></div></div></div></div></section>
+
+<section id="join"><div class="container"><div style="text-align:center;border:1px solid #61203d;border-radius:20px;padding:42px;background:radial-gradient(circle,#29101c,#0c0c10 65%)"><div class="eyebrow">18+ ONLY</div><h2 style="font-size:38px;margin:10px">Ready to Continue?</h2><p style="color:#aaa">Replace this button with your own legitimate destination.</p><a class="mainbtn" style="max-width:430px;margin:auto" href="#" onclick="alert('Replace this button URL with your own destination.');return false">Continue →</a></div></div></section>
+
+<footer><div class="container foot"><span>© 2026 PrivateCall</span><span>18+ • Privacy • Terms • Responsible Use</span></div></footer>
+</body>
+</html>
