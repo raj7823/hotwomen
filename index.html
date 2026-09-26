@@ -23,6 +23,14 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:11px
 @media(max-width:950px){.grid{grid-template-columns:repeat(3,1fr)}.heroGrid{grid-template-columns:1fr}.heroPhoto{max-height:500px}.heroCopy{padding:35px}.trust{grid-template-columns:repeat(3,1fr)}.vip{grid-template-columns:1fr}}
 @media(max-width:650px){.links{display:none}.heroPhoto img{min-height:410px}.heroCopy{padding:30px 18px}.icons{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(2,1fr)}.pic{height:280px}.trust{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}.head{align-items:flex-start;gap:12px}.head h2{font-size:27px}.view{white-space:nowrap}}
 @media(max-width:430px){.grid{grid-template-columns:1fr}.pic{height:390px}.foot{flex-direction:column;gap:8px}h1{letter-spacing:-2px}}
+
+.qr-modal{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:20px}
+.qr-box{width:min(390px,100%);background:#111116;border:1px solid #5a2039;border-radius:22px;padding:25px;text-align:center;box-shadow:0 25px 90px #000}
+.qr-box h3{margin:0 0 7px;font-size:24px}.qr-box p{color:#aaa;font-size:13px;margin:0 0 18px}
+.qr-box img{width:240px;height:240px;max-width:80%;background:#fff;padding:10px;border-radius:14px}
+.qr-close{display:block;width:100%;margin-top:18px;border:0;background:#292930;color:#fff;padding:12px;border-radius:10px;font-weight:800;cursor:pointer}
+.qr-url{font-size:11px;color:#777;word-break:break-all;margin-top:12px}
+.qr-btn{border:0;color:#fff;width:100%;cursor:pointer;font-family:inherit}
 </style>
 </head>
 <body>
@@ -38,11 +46,11 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:11px
 
 <section id="profiles"><div class="container"><div class="head"><div><h2>🔥 Trending Live Profiles</h2><p>Profiles • Online Now</p></div><a class="view" href="#profiles">View All Girls →</a></div>
 <div class="grid">
-<div class="profile"><div class="pic"><img src="assets/profile1.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Riya Patel</div><div class="loc">⌖ Mumbai</div><a class="call" href="#join">▣ Video Call</a></div></div>
-<div class="profile"><div class="pic"><img src="assets/profile2.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Neha Singh</div><div class="loc">⌖ Delhi</div><a class="call" href="#join">▣ Video Call</a></div></div>
-<div class="profile"><div class="pic"><img src="assets/profile3.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Anjali Verma</div><div class="loc">⌖ Jaipur</div><a class="call" href="#join">▣ Video Call</a></div></div>
-<div class="profile"><div class="pic"><img src="assets/profile4.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Kavya Sharma</div><div class="loc">⌖ Bengaluru</div><a class="call" href="#join">▣ Video Call</a></div></div>
-<div class="profile"><div class="pic"><img src="assets/profile5.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Pooja Yadav</div><div class="loc">⌖ Lucknow</div><a class="call" href="#join">▣ Video Call</a></div></div>
+<div class="profile"><div class="pic"><img src="assets/profile1.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Riya Patel</div><div class="loc">⌖ Mumbai</div><button class="call qr-btn" type="button" onclick="openQR()">▣ Video Call</button></div></div>
+<div class="profile"><div class="pic"><img src="assets/profile2.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Neha Singh</div><div class="loc">⌖ Delhi</div><button class="call qr-btn" type="button" onclick="openQR()">▣ Video Call</button></div></div>
+<div class="profile"><div class="pic"><img src="assets/profile3.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Anjali Verma</div><div class="loc">⌖ Jaipur</div><button class="call qr-btn" type="button" onclick="openQR()">▣ Video Call</button></div></div>
+<div class="profile"><div class="pic"><img src="assets/profile4.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Kavya Sharma</div><div class="loc">⌖ Bengaluru</div><button class="call qr-btn" type="button" onclick="openQR()">▣ Video Call</button></div></div>
+<div class="profile"><div class="pic"><img src="assets/profile5.jpg"><span class="status">● Online</span></div><div class="pbody"><div class="name">Pooja Yadav</div><div class="loc">⌖ Lucknow</div><button class="call qr-btn" type="button" onclick="openQR()">▣ Video Call</button></div></div>
 </div></div></section>
 
 <section id="vip"><div class="container"><div class="vip"><div class="vipImg"><img src="assets/vip.jpg" alt="VIP"></div><div class="vipCopy"><div class="eyebrow">♛ VIP MEMBERSHIP</div><h2>Premium Access</h2><p style="margin:0 0 10px;color:#ddd">Use this section for your own legitimate premium membership or booking offer.</p><div class="checks"><div><b>✓</b> Direct access</div><div><b>✓</b> Premium profiles</div><div><b>✓</b> HD experience</div><div><b>✓</b> Smooth private flow</div></div><a class="goldBtn" href="#join">♛ Get VIP Access →</a></div></div></div></section>
@@ -52,5 +60,32 @@ footer{border-top:1px solid var(--line);padding:28px 0;color:#777;font-size:11px
 <section id="join"><div class="container"><div style="text-align:center;border:1px solid #61203d;border-radius:20px;padding:42px;background:radial-gradient(circle,#29101c,#0c0c10 65%)"><div class="eyebrow">18+ ONLY</div><h2 style="font-size:38px;margin:10px">Ready to Continue?</h2><p style="color:#aaa">Replace this button with your own legitimate destination.</p><a class="mainbtn" style="max-width:430px;margin:auto" href="#" onclick="alert('Replace this button URL with your own destination.');return false">Continue →</a></div></div></section>
 
 <footer><div class="container foot"><span>© 2026 PrivateCall</span><span>18+ • Privacy • Terms • Responsible Use</span></div></footer>
+
+<div class="qr-modal" id="qrModal" onclick="if(event.target===this)closeQR()">
+  <div class="qr-box">
+    <h3>Scan to Continue</h3>
+    <p>Scan this QR code with your phone.</p>
+    <img id="qrImage" alt="QR Code">
+    <div class="qr-url" id="qrText"></div>
+    <button class="qr-close" type="button" onclick="closeQR()">Close</button>
+  </div>
+</div>
+<script>
+/* CHANGE ONLY THIS URL */
+const QR_URL = "https://example.com/your-payment-or-call-page";
+
+function openQR(){
+  const qr = "https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=10&data=" + encodeURIComponent(QR_URL);
+  document.getElementById("qrImage").src = qr;
+  document.getElementById("qrText").textContent = QR_URL;
+  document.getElementById("qrModal").style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+function closeQR(){
+  document.getElementById("qrModal").style.display = "none";
+  document.body.style.overflow = "";
+}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQR()});
+</script>
 </body>
 </html>
